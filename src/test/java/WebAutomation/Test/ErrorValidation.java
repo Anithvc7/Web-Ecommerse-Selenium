@@ -29,7 +29,7 @@ public class ErrorValidation extends BaseTest {
 	String email ="anithvc@gmail.com";
 	String password ="I143you@";
 	String productneeded ="ZARA COAT 3";
-	String abc = "new";
+	
 	
 	//public static void main(String[] args) throws InterruptedException, IOException {
 
@@ -70,6 +70,15 @@ public class ErrorValidation extends BaseTest {
 		OrderDetailsScreen orderDetailsScreen=homeProductScreen.orderButton();
 		Assert.assertTrue(orderDetailsScreen.ordersBookedDetails(productneeded));
     	
+    }
+    
+    @Test
+    public void confirmOrderDetail()
+    {
+    	Loginpage loginpage = new Loginpage(driver);
+		HomeProductScreen homeProductScreen =loginpage.loginscreen(email,password);
+		OrderDetailsScreen orderDetailsScreen=homeProductScreen.orderButton();
+		Assert.assertTrue(orderDetailsScreen.ordersBookedDetails(productneeded));
     }
 	
 }
