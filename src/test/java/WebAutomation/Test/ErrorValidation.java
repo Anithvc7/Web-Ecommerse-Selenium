@@ -29,6 +29,7 @@ public class ErrorValidation extends BaseTest {
 	String email ="anithvc@gmail.com";
 	String password ="I143you@";
 	String productneeded ="ZARA COAT 3";
+	String abc = "new";
 	
 	//public static void main(String[] args) throws InterruptedException, IOException {
 
