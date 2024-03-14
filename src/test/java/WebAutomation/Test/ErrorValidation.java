@@ -30,6 +30,7 @@ public class ErrorValidation extends BaseTest {
 	String password ="I143you@";
 	String productneeded ="ZARA COAT 3";
 	
+	
 	//public static void main(String[] args) throws InterruptedException, IOException {
 
 	@Test(groups= {"PurchaseOrder"},retryAnalyzer=RetryFailTest.class)
@@ -69,6 +70,15 @@ public class ErrorValidation extends BaseTest {
 		OrderDetailsScreen orderDetailsScreen=homeProductScreen.orderButton();
 		Assert.assertTrue(orderDetailsScreen.ordersBookedDetails(productneeded));
     	
+    }
+    
+    @Test
+    public void confirmOrderDetail()
+    {
+    	Loginpage loginpage = new Loginpage(driver);
+		HomeProductScreen homeProductScreen =loginpage.loginscreen(email,password);
+		OrderDetailsScreen orderDetailsScreen=homeProductScreen.orderButton();
+		Assert.assertTrue(orderDetailsScreen.ordersBookedDetails(productneeded));
     }
 	
 }
